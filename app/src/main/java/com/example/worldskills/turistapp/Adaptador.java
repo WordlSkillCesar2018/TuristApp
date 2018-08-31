@@ -24,10 +24,8 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.Holder> {
 
 
 
-
-
     public interface OnItemClickListener {
-       public void onItemClick(LinearLayout b, View var2, int var3, long var4);
+       void onItemClick(LinearLayout b, View var2, int var3, long var4);
     }
 
     @Override
