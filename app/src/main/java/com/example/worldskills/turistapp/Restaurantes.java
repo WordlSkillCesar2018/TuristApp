@@ -114,10 +114,22 @@ public class Restaurantes extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.inicio) {
-            // Handle the camera action
+            Intent intent=new Intent(Restaurantes.this,Inicio.class);
+            startActivity(intent);
+            finish();
+        } else if (id == R.id.sitios) {
+            Intent intent=new Intent(Restaurantes.this,Sitios.class);
+            startActivity(intent);
+            finish();
+
         } else if (id == R.id.hoteles) {
+            Intent intent=new Intent(Restaurantes.this,Hoteles.class);
+            startActivity(intent);
+            finish();
+
 
         } else if (id == R.id.restaurantes) {
+
 
         } else if (id == R.id.nav_share) {
 

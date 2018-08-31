@@ -114,10 +114,23 @@ public class Hoteles extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.inicio) {
-            // Handle the camera action
+            Intent intent=new Intent(Hoteles.this,Inicio.class);
+            startActivity(intent);
+            finish();
+        } else if (id == R.id.sitios) {
+            Intent intent=new Intent(Hoteles.this,Sitios.class);
+            startActivity(intent);
+            finish();
+
+
         } else if (id == R.id.hoteles) {
 
+
+
         } else if (id == R.id.restaurantes) {
+            Intent intent=new Intent(Hoteles.this,Restaurantes.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_share) {
 

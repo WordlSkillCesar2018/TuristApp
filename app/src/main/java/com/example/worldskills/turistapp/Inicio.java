@@ -87,9 +87,16 @@ public class Inicio extends AppCompatActivity
             Intent intent=new Intent(Inicio.this,Sitios.class);
             startActivity(intent);
 
+
         } else if (id == R.id.hoteles) {
+            Intent intent=new Intent(Inicio.this,Hoteles.class);
+            startActivity(intent);
+
 
         } else if (id == R.id.restaurantes) {
+            Intent intent=new Intent(Inicio.this,Restaurantes.class);
+            startActivity(intent);
+
 
         } else if (id == R.id.nav_share) {
 

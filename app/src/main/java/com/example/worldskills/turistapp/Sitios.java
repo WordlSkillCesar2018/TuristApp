@@ -116,10 +116,23 @@ public class Sitios extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.inicio) {
-            // Handle the camera action
+            Intent intent=new Intent(Sitios.this,Inicio.class);
+            startActivity(intent);
+            finish();
+        } else if (id == R.id.sitios) {
+
+
+
         } else if (id == R.id.hoteles) {
+            Intent intent=new Intent(Sitios.this,Hoteles.class);
+            startActivity(intent);
+            finish();
+
 
         } else if (id == R.id.restaurantes) {
+            Intent intent=new Intent(Sitios.this,Restaurantes.class);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.nav_share) {
 
