@@ -51,6 +51,7 @@ public class Hoteles extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Hoteles.this,MapsActivity.class);
+                intent.putExtra("ubicacion","3");
                 startActivity(intent);
             }
         });

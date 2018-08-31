@@ -51,6 +51,7 @@ public class Restaurantes extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Restaurantes.this,MapsActivity.class);
+                intent.putExtra("ubicacion","1");
                 startActivity(intent);
             }
         });

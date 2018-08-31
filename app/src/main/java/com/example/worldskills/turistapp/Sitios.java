@@ -53,6 +53,7 @@ public class Sitios extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Sitios.this,MapsActivity.class);
+                intent.putExtra("ubicacion","2");
                 startActivity(intent);
             }
         });
