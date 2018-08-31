@@ -30,7 +30,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
-
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -43,22 +42,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        LatLng juana = new LatLng(4.672065, -74.05126);
+        LatLng grafata = new LatLng(4.6810056, -74.04333);
+        LatLng criterion = new LatLng(4.6517161, -74.058187);
+        LatLng tramonti = new LatLng(4.6677515, -74.0530483);
+        LatLng divina = new LatLng(4.653567, -74.0571337);
+        mMap.addMarker(new MarkerOptions().position(juana).title("Juana la Loca"));
+        mMap.addMarker(new MarkerOptions().position(grafata).title("La fragata Giratoria"));
+        mMap.addMarker(new MarkerOptions().position(criterion).title("Criterion"));
+        mMap.addMarker(new MarkerOptions().position(tramonti).title("Tramonti"));
+        mMap.addMarker(new MarkerOptions().position(divina).title("Tratoria La Divina Comedia"));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(juana,11));
+
+
 
         if (ContextCompat.checkSelfPermission(MapsActivity.this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
-           // Toast.makeText(getApplicationContext(), "Aceptar permisos de localizacion", Toast.LENGTH_LONG).show();
             ActivityCompat.requestPermissions(MapsActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, permisos);
         } else {
             mMap.setMyLocationEnabled(true);
-            return;
+            }
         }
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-    }
 
     public void onRequestPermissionsResult(int requestCode,
                                            String permissions[], int[] grantResults) {
@@ -76,6 +82,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }else{
         mMap.setMyLocationEnabled(true);}
-
     }
 }

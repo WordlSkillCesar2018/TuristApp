@@ -17,12 +17,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
-public class Sitios extends AppCompatActivity
+public class Hoteles extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     RecyclerView recyclerView;
     Adaptador adaptador;
@@ -31,11 +29,11 @@ public class Sitios extends AppCompatActivity
     ArrayList<Info>llenar;
     Context context;
     int cambiar=1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sitios);
+        setContentView(R.layout.activity_hoteles);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         recyclerView=findViewById(R.id.recyclerview);
@@ -52,7 +50,7 @@ public class Sitios extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Sitios.this,MapsActivity.class);
+                Intent intent=new Intent(Hoteles.this,MapsActivity.class);
                 startActivity(intent);
             }
         });
@@ -145,7 +143,7 @@ public class Sitios extends AppCompatActivity
             linearLayoutManager=new GridLayoutManager(context,cambiar);
             recyclerView.setLayoutManager(linearLayoutManager);
             recyclerView.setAdapter(adaptador);
-    }
+        }
     }
 
 }
