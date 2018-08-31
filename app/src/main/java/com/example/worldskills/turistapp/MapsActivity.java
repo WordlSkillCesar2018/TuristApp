@@ -104,6 +104,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             ActivityCompat.requestPermissions(MapsActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, permisos);
         } else {
             mMap.setMyLocationEnabled(true);
+
             }
         }
 

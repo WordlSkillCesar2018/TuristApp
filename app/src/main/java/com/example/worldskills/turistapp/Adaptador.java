@@ -1,6 +1,7 @@
 package com.example.worldskills.turistapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,15 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.Holder> {
         holder.nombre.setText(a.getNombre());
         holder.descripcion.setText(a.getDescripcion());
         holder.ubicacion.setText(a.getUbicacion());
+        holder.click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String a = holder.nombre.getText().toString();
+                Intent intent = new Intent(context,Detalles.class);
+                intent.putExtra("nombre",a);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

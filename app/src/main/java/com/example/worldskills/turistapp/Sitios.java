@@ -41,7 +41,7 @@ public class Sitios extends AppCompatActivity
         recyclerView=findViewById(R.id.recyclerview);
 
         llenar=new ArrayList<Info>();
-        llenar.add(new Info("hotel","cama","bogota","ah"));
+        llenar.add(new Info("Cerro de Monserrate","El Cerro de Monserrate los espera durante los 365 días del año bogota","Carrera 2 E No. 21-48 | Paseo Bolívar, Bogota, Colombia",""));
         llenar.add(new Info("hotel","cama","bogota","ah"));
 
 
